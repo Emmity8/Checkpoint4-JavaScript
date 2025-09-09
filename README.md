@@ -1,12 +1,26 @@
-# React + Vite
+# Catálogo de Filmes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um catálogo de filmes simples, construído com **React** e **Tailwind CSS**. A aplicação foi desenvolvida para demonstrar e praticar conceitos fundamentais do React, como gerenciamento de estado, ciclos de vida de componentes e passagem de propriedades.
 
-Currently, two official plugins are available:
+## 🎬 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Exibição de Filmes:** A aplicação exibe uma lista de filmes, mostrando o título, ano e gênero de cada um.
+- **Atualização Dinâmica do Título da Página:** O título do navegador é atualizado automaticamente para mostrar o número total de filmes na lista.
+- **Remoção de Filmes:** É possível remover filmes da lista, e a interface se atualiza em tempo real.
 
-## Expanding the ESLint configuration
+## ⚙️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React:** Biblioteca JavaScript para a construção da interface do usuário.
+- **`useState` Hook:** Usado para gerenciar o estado da lista de filmes no componente `App`, permitindo que os dados sejam dinâmicos e reativos.
+- **`useEffect` Hook:** Utilizado para executar efeitos colaterais. Neste projeto, ele é responsável por atualizar o título da página sempre que a lista de filmes é alterada.
+- **Props (Propriedades):** A lista de filmes é passada do componente pai (`App`) para o componente filho (`ListaDeFilmes`) através de `props`, permitindo a comunicação entre componentes.
+- **Tailwind CSS:** Um framework de CSS de "classes utilitárias" que permite estilizar a aplicação de forma rápida e direta, sem a necessidade de escrever CSS tradicional em arquivos separados.
+
+## 📂 Estrutura do Projeto
+
+O projeto é organizado com a seguinte estrutura de componentes:
+
+- `App.js`: O componente principal que gerencia o estado (`useState`) e o efeito (`useEffect`). Ele também renderiza o componente `ListaDeFilmes`.
+- `ListaDeFilmes.js`: Um componente funcional que recebe a lista de filmes via `props` e renderiza cada item em uma lista.
+
+---
